@@ -1,0 +1,83 @@
+.woocommerce-account {
+    .article-body {
+        width: 100%;
+        padding-right: var(--bs-gutter-x, 0.75rem);
+        padding-left: var(--bs-gutter-x, 0.75rem);
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1140px;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        @extend .body-container;
+        h2 {
+            text-align: center;
+        }
+    }
+    .woocommerce-MyAccount-navigation {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                padding: 0.5rem 1rem;
+                border-bottom: 1px solid rgba($black, 0.1);
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .woocommerce-form-login, .woocommerce-EditAccountForm {
+        .woocommerce-Input {
+            @extend %form-control;
+        }
+        .woocommerce-Button, .button {
+            @extend %wc-button;
+            @extend .btn-plus;
+        }
+        fieldset {
+            margin-top: 2rem;
+        }
+    }
+    .woocommerce-MyAccount-content {
+        .woocommerce-Button, .button {
+            @extend %wc-button;
+            @extend .btn-plus;
+        }
+    }
+    .woocommerce-address-fields {
+        .input-text {
+            @extend %form-control;
+        }
+    }
+    .woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+        width: 100%;
+        margin: 0 auto;
+        @include media-breakpoint-up(md) {
+            width: 50%;
+        }
+        .woocommerce-form-login__submit {
+            @extend %wc-button;
+            @extend .btn-plus;
+        }
+    }
+    .woocommerce-Addresses {
+        display: flex;
+        flex-direction: column;
+        .woocommerce-Address {
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba($black, 0.1);
+            h3 {
+                font-size: $font-lg;
+            }
+        }
+    }
+}
+
+.my-account {
+    &__hero {
+        padding: 12rem 0 6rem;
+        min-height: 330px;
+    }
+}

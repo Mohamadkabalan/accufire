@@ -1,0 +1,88 @@
+.footer {
+  padding: 30px 15px 15px 15px;
+  background: rgba($black, 0.8) url(../images/footer-right-misc.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  color: $white;
+  padding: 2rem 3rem 2rem 2rem;
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  &__info {
+    padding-right: 3rem;
+    img {
+      height: 70px;
+      width: auto;
+    }
+    .btn-plus {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+  &__main-menu {
+    padding-left: 1rem !important;
+    border-left: 1px solid rgba($white, 0.25);
+    padding-right: 3rem;
+    .nav-item {
+      .nav-link {
+        padding: 0;
+        font-family: $KamerikHeavy;
+        padding: 0.25rem 0;
+      }
+    }
+  }
+  &__secondary-menu {
+    padding-left: 1rem !important;
+    border-left: 1px solid rgba($white, 0.25);
+    .nav-item {
+      .nav-link {
+        padding: 0.25rem 0;
+        text-transform: capitalize;
+        color: $white;
+      }
+    }
+  }
+  &__dealer-login {
+    text-align: right;
+    margin-bottom: 1rem;
+    @include media-breakpoint-down(md) {
+      justify-content: flex-start;
+      text-align: left;
+    }
+    .btn-plus {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+  &__social {
+    display: flex;
+    justify-content: flex-end;
+    @include media-breakpoint-down(md) {
+      justify-content: flex-start;
+    }
+    a {
+      padding: 0.25rem 0.75rem;
+      font-size: 1.5rem;
+      color: $white;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+  .nav-item {
+    &.menu-item-has-children {
+      .nav-drop {
+        display: none;
+      }
+    }
+  }
+  &__copyright {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    &-title {
+      font-family: $KamerikHeavy;
+    }
+  }
+}

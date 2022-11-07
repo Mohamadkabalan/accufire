@@ -1,0 +1,28 @@
+{% if news | length > 0 %}
+<div class="home-articles">
+  <div class="container">
+    <h2 class="home-articles__title">NEWS & EVENTS</h2>
+    <p class="home-articles__description">Come join us for upcoming events and check out the latest of what we are up to…</p>
+    <div class="row gx-3 gy-3">
+			{% for article in news %}
+        <div class="col-md">
+          <div class="home-articles__teaser">
+            <a href="{{article.link}}"><img class="home-articles__teaser-image" src="{{ article.thumbnail.src|resize(800, 535) }}" alt="{{ article.title }}"></a>
+            <div class="home-articles__teaser-content">
+              <p class="home-articles__teaser-date">{{ article.date }}</p>
+              <a href="{{article.link}}" class="home-articles__teaser-title">{{ article.title }}</a>
+              <p class="home-articles__teaser-preview">
+              {% if article.post_excerpt is not empty %}
+                {{ article.post_excerpt }}
+              {% else %}
+                {{ article.post_content|excerpt(30) }}
+              {% endif %}
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,15 @@
+%form-control {
+    padding: $input-btn-padding-y $input-btn-padding-x;
+    border-radius: 0;
+    border: 1px solid $gray-300;
+}
+
+%form-control-sm {
+    padding: $input-btn-padding-y-sm $input-btn-padding-x-sm;
+    border-radius: 0;
+    border: 1px solid $gray-300;
+}
+
+%form-control-button {
+    padding: $input-btn-padding-y $input-btn-padding-x;
+}

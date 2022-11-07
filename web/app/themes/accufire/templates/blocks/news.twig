@@ -1,0 +1,30 @@
+<div class="news">
+	<div class="container">
+		{% if fields.title or fields.subtitle %}
+			<div class="mb-5">
+				<h2 class="section-title text-center">{{fields.title}}</h2>
+				<p class="section-subtitle text-center">{{fields.subtitle}}</p>
+			</div>
+		{% endif %}
+		<div class="row gx-3 gy-3">
+			{% for article in articles %}
+        <div class="col-md-4 col-lg-3">
+          <div class="home-articles__teaser">
+            <a href="{{article.link}}"><img class="home-articles__teaser-image" src="{{ article.thumbnail.src|resize(800, 535) }}" alt="{{ article.title }}"></a>
+            <div class="home-articles__teaser-content">
+              <p class="home-articles__teaser-date">{{ article.date }}</p>
+              <a href="{{article.link}}" class="home-articles__teaser-title">{{ article.title }}</a>
+              <p class="home-articles__teaser-preview">
+              {% if article.post_excerpt is not empty %}
+                {{ article.post_excerpt }}
+              {% else %}
+                {{ article.post_content|excerpt(30) }}
+              {% endif %}
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+		</div>
+	</div>
+</div>

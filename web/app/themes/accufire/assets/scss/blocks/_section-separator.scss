@@ -1,0 +1,15 @@
+.section-separator {
+    padding: 1rem 0;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        width: 25%;
+        top: 50%;
+        left: 50%;
+        margin-top: -2px;
+        margin-left: -12.5%;
+        background: $primary;
+    }
+}

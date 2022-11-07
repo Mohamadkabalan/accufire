@@ -1,0 +1,110 @@
+.testimonials {
+    position: relative;
+    margin-top: -5rem;
+    background-image: url("../images/testimonials-bg.jpg");
+    background-size: cover;
+    mask-image: url("../images/testimonials-mask.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    z-index: $z-base-1;
+    background-position-y: center;
+    @include media-breakpoint-down(md) {
+        mask-image: url("../images/testimonials-mask-sm.svg");
+    }
+    @include media-breakpoint-up(xxl) {
+        mask-image: url("../images/testimonials-mask-xl.svg");
+    }
+    @media (min-width: 1700px) {
+        mask-image: url("../images/testimonials-mask-xxl.svg");
+    }
+    @media (min-width: 2200px) {
+        mask-image: url("../images/testimonials-mask-xxxl.svg");
+    }
+    &-mask {
+        max-height: 300px;
+    }
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+    }
+    svg {
+    }
+    &__clip {
+        width: 100%;
+        position: relative;
+        &-center {
+        }
+        &-top {
+            transform: translateY(0);
+        }
+        &-bottom {
+            transform: translateY(100%);
+        }
+    }
+    &__bottom {}
+    &__content {
+        padding: 4rem 0;
+        color: $white;
+        width: 100%;
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+        &-title-wrapper {
+            position: relative;
+        }
+        &-title {
+            text-transform: uppercase;
+            color: $primary;
+            font-weight: $font-heavy;
+        }
+        &-subtitle {
+            text-transform: uppercase;
+        }
+        &-misc {
+            position: absolute;
+            top: -3.5rem;
+            left: 0;
+            width: 240px;
+            transform: rotate(180deg);
+        }
+    }
+}
+.testimonials-carousel {
+    position: relative;
+    &__misc {
+        position: absolute;
+        bottom: -3rem;
+        right: 0;
+        width: 240px;
+        z-index: $z-base-1;
+    }
+    &__content {
+        padding: 0 12%;
+        z-index: $z-base-1;
+        position: relative;
+    }
+    &__quote {}
+    &__name {
+        margin-bottom: 0;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+    }
+    &__city {
+        margin-bottom: 0;
+    }
+    .carousel-indicators {
+        margin: 0 10% 0 0;
+        justify-content: flex-end;
+        bottom: calc(100% + 1rem);
+    }
+    .carousel-control-prev, .carousel-control-next {
+        z-index: $z-base-3;
+    }
+}

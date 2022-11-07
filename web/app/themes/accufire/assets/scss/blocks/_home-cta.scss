@@ -1,0 +1,28 @@
+.home-cta {
+  background: $gradient-primary;
+  text-align: center;
+  padding: 0 3rem 3rem;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    bottom: 100%;
+    left: 0;
+    height: 3rem;
+    background: $gradient-primary;
+    width: 100%;
+  }
+  &__wrapper {}
+  &__subtitle {
+    color: $black;
+    text-transform: uppercase;
+  }
+  &__title {
+    color: $white;
+    text-transform: uppercase;
+  }
+  &__description {
+    color: $white;
+  }
+  &__link {}
+}

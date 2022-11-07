@@ -1,0 +1,32 @@
+.home-social {
+    padding: 5rem 0;
+    &__content {
+        background-image: url("../images/home-social-bg.jpg");
+        background-size: cover;
+        padding: 2rem;
+        &-subtitle {
+            color: $white;
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+        &-title {
+            color: $primary;
+            text-transform: uppercase;
+        }
+    }
+    &__links {
+        margin-left: -1rem;
+        a {
+            border-right: 2px solid $primary;
+            color: $white;
+            font-size: $font-lg;
+            font-weight: normal;
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+    &__instagram-feed {
+        margin-top: -16px;
+    }
+}

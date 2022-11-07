@@ -1,0 +1,15 @@
+0000.053 (R) [notice] Looking for plugins archive: file name: backup_2021-07-19-0800_UDI_41785ba53b18-plugins.zip
+0000.053 (R) [notice] Archive is expected to be size: 32716 KB: OK
+0000.057 (R) [notice] Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.059 (R) [notice] Unpacking backup... (backup_2021-07-19-0800_UDI_41785ba53b18-plugins.zip, 31.9 MB)
+0000.574 (R) [notice] Unzip progress: 1002 out of 6497 files (2.1 MB, plugins/elementor/assets/shapes/arrow-negative.svg)
+0004.407 (R) [notice] Unzip progress: 2003 out of 6497 files (36 MB, plugins/elementor-pro/modules/woocommerce/conditions/woocommerce.php)
+0008.613 (R) [notice] Unzip progress: 3004 out of 6497 files (50.3 MB, plugins/updraftplus/vendor/guzzle/guzzle/src/Guzzle/Cache/Zf2CacheAdapter.php)
+0012.887 (R) [notice] Unzip progress: 4005 out of 6497 files (66.3 MB, plugins/updraftplus/languages/updraftplus-pt_BR.po)
+0017.197 (R) [notice] Unzip progress: 5006 out of 6497 files (84 MB, plugins/revslider/public/assets/assets/svg/communication/ic_portable_wifi_off_24px.svg)
+0021.358 (R) [notice] Unzip progress: 6007 out of 6497 files (105.3 MB, plugins/revslider/public/assets/assets/svg/av/ic_forward_5_24px.svg)
+0022.650 (R) [notice] Unzip progress: 6497 out of 6497 files (105.4 MB, plugins/revslider/public/assets/assets/svg/hardware/ic_headset_mic_24px.svg)
+0022.662 (R) [notice] Moving old data out of the way...
+0029.164 (R) [notice] Moving unpacked backup into place...
+0030.245 (R) [notice] Cleaning up rubbish...
+0030.261 (R) [notice] Restore successful!

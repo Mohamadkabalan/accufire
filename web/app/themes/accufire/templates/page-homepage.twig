@@ -1,0 +1,30 @@
+{% extends "base.twig" %}
+{% block head %}
+  <script type="text/javascript" id="ZC_Forms_Popup" src="https://campaigns.zoho.com/js/optin.min.js" ></script>
+{% endblock %}
+
+{% block content %}
+
+	<div class="page content-wrapper">
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<section class="article-content">
+				<div class="article-body">
+
+					{% include "blocks/home-hero-carousel.twig" %}
+
+					<div class="categories__wrapper">
+						{% include "blocks/home-cta.twig" %}
+						{% include "blocks/categories.twig" %}
+					</div>
+
+					{% include "blocks/testimonials.twig" %}
+					{% include "blocks/home-social.twig" %}
+					{# <div class="section-separator"></div>
+					{% include "blocks/home-articles.twig" %} #}
+					{{post.content}}
+
+				</div>
+			</section>
+		</article>
+	</div>
+{% endblock %}

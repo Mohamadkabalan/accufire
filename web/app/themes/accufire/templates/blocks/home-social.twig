@@ -1,0 +1,34 @@
+<div class="home-social">
+  <div class="container-xl body-container">
+    <div class="row gx-0 align-items-stretch">
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="home-social__content h-100">
+          <p class="home-social__content-subtitle">Social</p>
+          <h2 class="home-social__content-title">Follow Accufire</h2>
+          <div class="home-social__links">
+            {% for item in social_menu.items %}
+            <a href="{{ item.link }}" class="btn btn-link">
+              {% if item.title == 'Facebook' %}
+              <i class="fab fa-facebook-f"></i>
+              {% elseif item.title == 'Instagram' %}
+              <i class="fab fa-instagram"></i>
+              {% elseif item.title == 'Youtube' %}
+              <i class="fab fa-youtube"></i>
+              {% elseif item.title == 'Twitter' %}
+              <i class="fab fa-twitter-square"></i>
+              {% else %}
+              <i class="fas fa-hashtag"></i>
+              {% endif %}
+            </a>
+        {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="home-social__instagram-feed">
+          {{ function('do_shortcode', '[instagram-feed showbio=false showheader=false]') }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,119 @@
+.btn {
+    text-transform: uppercase;
+    font-weight: $font-bold;
+    &-primary {
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.btn-plus {
+  position: relative;
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+  &::before, &::after {
+    position: absolute;
+    font-family: $fontawesome-pro; font-weight: 400; content: "\f067";
+  }
+  &::before {
+    right: calc(100% - 1.75rem);
+  }
+  &::after {
+    left: calc(100% - 1.75rem);
+  }
+  &.btn-accufire-white {
+    padding-left: 3.5rem !important;
+  }
+}
+.btn-sm {
+  &.btn-plus {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    &::before {
+      right: calc(100% - 1rem);
+    }
+    &::after {
+      left: calc(100% - 1rem);
+    }
+    &.btn-accufire-white {
+      padding-left: 2rem !important;
+      &::before {
+        right: calc(100% - 1.5rem);
+      }
+    }
+  }
+}
+
+%wc-button {
+    padding: $input-btn-padding-y $input-btn-padding-x;
+    border-radius: 0 !important;
+    background-color: $primary !important;
+    color: $white !important;
+    transition: background-color 200ms ease-in-out;
+    text-transform: uppercase;
+    &:hover {
+        background-color: darken($primary, 5%) !important;
+        color: $white !important;
+    }
+}
+
+.bordered-button{
+  border:1px solid $primary;
+  padding:4px 32px;
+}
+.bordered-curved-button{
+  border:1px solid $primary;
+  padding:4px 32px;
+  position: relative;
+}
+
+
+/* .add_to_cart_button {
+  background-color: $primary !important;
+  color: $white !important;
+} */
+
+.frm_button_submit {
+  background: $primary !important;
+  text-transform: uppercase !important;
+  font-family: $KamerikBold !important;
+  border-radius: 0 !important;
+  @extend .btn-plus;
+  border: none !important;
+  transition: background 100ms ease-in;
+  box-shadow: none !important;
+  &:hover {
+    background: darken($primary, 5%) !important;
+    color: $white !important;
+  }
+}
+
+.btn-accufire-primary {
+  background-image: url(../images/btn-accufire-border-primary.svg);
+  background-repeat: no-repeat;
+  background-position-x: -1px;
+  background-position-y: bottom;
+  overflow: hidden;
+  border-left: transparent;
+  border-bottom: transparent;
+  &:hover {
+    background-color: transparent !important;
+    background-image: url(../images/btn-accufire-border-primary-hover.svg);
+  }
+}
+
+.btn-accufire-white {
+  background-image: url(../images/btn-accufire-border-white.svg);
+  background-repeat: no-repeat;
+  background-position-x: -1px;
+  background-position-y: bottom;
+  overflow: hidden;
+  border-left: transparent;
+  border-bottom: transparent;
+  &:hover {
+    background-color: transparent !important;
+    background-image: url(../images/btn-accufire-border-white-hover.svg);
+  }
+}

@@ -1,0 +1,26 @@
+{#
+/**
+* Block Name: Example block
+*
+* This is the template that displays the example block.
+*/
+#}
+
+{% if is_preview %}
+<p>I will only appear in the editor.</p>
+{% endif %}
+
+
+<div class="call-to-action">
+    <div class="container-xl">
+        <div class="row align-items-center">
+            <div class="col-md">
+                <h2 class="call-to-action__title">{{ fields.cta_title }}</h2>
+                <h3 class="call-to-action__subtitle">{{ fields.cta_subtitle }}</h3>
+            </div>
+            <div class="col-md-auto">
+                <a href="{{fields.link.url}}" target="{{fields.cta_link.target}}" class="btn btn-outline-white">{{fields.cta_link.title}}</a>
+            </div>
+        </div>
+    </div>
+</div>

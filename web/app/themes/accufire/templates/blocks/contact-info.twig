@@ -1,0 +1,29 @@
+<div class="contact-info">
+    <div class="container">
+        <h1 class="section-title text-center">{{fields.title}}</h1>
+        <p class="section-subtitle text-center">{{fields.subtitle}}</p>
+        <div class="contact-info__content">
+            <div class="row align-items-center">
+                {% for item in fields.contact_info_blocks %}
+                <div class="col">
+                    <div class="contact-info__item">
+                        {% if item.image %}
+                        <div class="contact-info__image">
+                            <img src="{{ Image(item.image).src}}" alt="">
+                        </div>
+                        {% endif %}
+                        {% if item.title_xl %}
+                        <h2 class="contact-info__title-xl">{{item.title_xl}}</h2>
+                        {% endif %}
+                        <h2 class="contact-info__title">{{item.title}}</h2>
+                        <p class="contact-info__description">{{item.description}}</p>
+                        {% if item.button %}
+                        <a href="{{ item.button.url }}" class="btn btn-primary btn-plus">{{ item.button.title }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

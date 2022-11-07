@@ -1,0 +1,120 @@
+{% block content %}
+<div class="basic-hero basic-hero--small basic-hero--dark" style="background-image: url({{ theme.link }}/assets/images/internal-page-bg.jpg);">
+        <h1 class="basic-hero__title">{{ post.title }}</h1>
+</div>
+
+<div class="wc-cart">
+    <div class="container-xl">
+        <div class="row">
+            <div class="col-md">
+                <main role="main">
+
+                    <div class="wc-cart__cart-info">
+        
+                        {% do action('woocommerce_before_cart') %}
+        
+                        <form class="woocommerce-cart-form" action="{{ action }}" method="post">
+        
+                            {% do action('woocommerce_before_cart_table') %}
+
+                            <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+        
+                                <thead>
+        
+                                    <tr>
+                                        <th class="product-name" colspan="2">Product</th>
+                                        <th class="product-price text--right">Price</th>
+                                        <th class="product-quantity">Quantity</th>
+                                        <th class="product-subtotal text--right">Total</th>
+                                    </tr>
+        
+                                </thead>
+        
+                                <tbody>
+        
+                                    {% do action('woocommerce_before_cart_contents') %}
+        
+                                    {% for product in products %}
+                                        <tr class="woocommerce-cart-form__cart-item cart_item">
+        
+                                            <td>
+                                                <img src="{{ product.thumbnail }}" data-src="{{ product.thumbnail }}" class="b-lazy img--responsive" alt="">
+                                            </td>
+        
+                                            <td>
+                                                <a href="{{ product.url }}" title="Direct naar {{ product.title }}">
+                                                    <strong>{{ product.title }}</strong>
+                                                </a>
+                                            </td>
+        
+                                            <td class="text--right">
+                                                {{ product.price }}
+                                            </td>
+        
+                                            <td class="product-quantity" data-title="Quantity">
+                                                {{ product.quantity }}
+        
+                                                <a href="{{ product.delete_permalink }}" class="remove btn cart-action" aria-label="Delete product" data-product_id="{{ product.delete_productid }}" data-product_sku="{{ product.delete_sku }}" title="Delete product"></a>
+        
+                                            </td>
+        
+                                            <td class="text--right">
+                                                {{ product.total }}
+                                            </td>
+        
+                                        </tr>
+        
+                                    {% endfor %}
+        
+                                    {% do action('woocommerce_cart_contents') %}
+        
+                                    <tr>
+        
+                                        <td colspan="6" class="actions">
+        
+                                            {% do
+                                                action('woocommerce_cart_actions') %}
+        
+                                            {{ nonce }}
+
+                                            <div class="presents-info cart-coupons">
+                                              <div class="coupon">
+                                                  <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Coupon code" />
+                                                  <button type="submit" class="btn btn-primary apply-coupon" name="apply_coupon" value="Apply">Apply</button>
+                                                  {% do action('woocommerce_cart_coupon') %}
+                                              </div>
+                                              <button type="submit" class="btn update-cart-button" name="update_cart" value="Update cart">Update cart </button>
+                                            </div>
+        
+                                        </td>
+        
+                                    </tr>
+        
+                                    {% do action('woocommerce_after_cart_contents') %}
+        
+                                </tbody>
+        
+                            </table>
+        
+                            {% do action('woocommerce_after_cart_table') %}
+        
+                        </form>
+        
+                    </div>
+
+                </main>
+            </div>
+            <div class="col-md-4">
+                <aside role="complementary" class="wc-cart__sidebar">
+                    {% do action('woocommerce_cart_collaterals') %}
+                </aside>
+            </div>
+        </div>
+
+
+
+        {% do action('woocommerce_after_cart') %}
+
+    </div>
+</div>
+{% endblock %}

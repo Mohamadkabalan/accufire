@@ -1,0 +1,98 @@
+{#
+/**
+ * Block Name: Example block
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+<h2>{{ fields.custom_text_field }}</h2>
+<div id="example-{{ block.id }}" class="featured-article__wrapper">
+	{% for article in articles %}
+		<article class="post-type-{{ article.post_type }} featured-article" id="post-{{ article.ID }}">
+			<div class="container-xl">
+				<div class="row gx-5">
+					<div class="col-md featured-article__image {{ article.image_position == 'left' ? 'order-0' :'order-1' }}" style="background-image: url({{Image(article.meta('article_image')).src}});">
+					</div>
+					<div class="col-md {{ article.image_position == 'left' ? 'order-1' :'order-0' }}">
+						<section class="featured-article__content article-content">
+							<p class="featured-article__type">{{ article.category }}</p>
+							<a href="{{article.link}}" class="featured-article__title">
+								<h2>{{ article.title }}</h2>
+							</a>
+							
+							<p>{{article.summary}}</p>
+							<a href="{{ article.link }}">{{ _e('edit') }}</a>
+							<p class="blog-author">
+								<span>By</span>
+								<a href="{{article.author.path}}">
+									{{ article.author.name }}
+								</a>
+								<span>&bull;</span>
+								<time datetime="{{ article.date|date('Y-m-d H:i:s') }}">{{ article.date }}</time>
+							</p>
+							<!-- <div class="article-body">
+								{{article.content}}
+							</div> -->
+						</section>
+					</div>
+				</div>
+			</div>
+		</article>
+	{% endfor %}
+
+	{% for review in reviews %}
+	<article class="post-type-{{ review.post_type }} featured-article" id="post-{{ review.ID }}">
+		<div class="container-xl">
+			<div class="row gx-5">
+				<div class="col-md featured-article__image {{ review.image_position == 'left' ? 'order-0' :'order-1' }}" style="background-image: url({{Image(review.meta('article_image')).src}});">
+					<!-- <img src="{{ review.thumbnail.src|resize(1200, 300) }}"> -->
+				</div>
+				<div class="col-md {{ review.image_position == 'left' ? 'order-1' :'order-0' }}">
+					<section class="featured-article__content review-content">
+						<p class="featured-article__type">{{ review.category }}</p>
+						<a href="{{review.link}}" class="featured-article__title">
+							<h2>{{ review.title }}</h2>
+						</a>
+						
+						<p>{{review.summary}}</p>
+						<a href="{{ review.link }}">{{ _e('edit') }}</a>
+						<p class="blog-author">
+							<span>By</span>
+							<a href="{{review.author.path}}">
+								{{ review.author.name }}
+							</a>
+							<span>&bull;</span>
+							<time datetime="{{ review.date|date('Y-m-d H:i:s') }}">{{ review.date }}</time>
+						</p>
+						<!-- <div class="review-body">
+							{{review.content}}
+						</div> -->
+					</section>
+				</div>
+			</div>
+		</div>
+	</article>
+{% endfor %}
+
+	<!-- {% for review in reviews %}
+		<article class="post-type-{{ review.post_type }}" id="post-{{ review.ID }}">
+			<img src="{{ review.thumbnail.src|resize(1200, 300) }}">
+			<section class="article-content">
+				<h1 class="article-h1">{{ review.title }}</h1>
+				<a href="{{ review.link }}">{{ _e('edit') }}</a>
+				<p class="blog-author">
+					<span>By</span>
+					<a href="{{review.author.path}}">
+						{{ review.author.name }}
+					</a>
+					<span>&bull;</span>
+					<time datetime="{{ review.date|date('Y-m-d H:i:s') }}">{{ review.date }}</time>
+				</p>
+				<div class="article-body">
+					{{review.content}}
+				</div>
+			</section>
+		</article>
+	{% endfor %} -->
+</div>

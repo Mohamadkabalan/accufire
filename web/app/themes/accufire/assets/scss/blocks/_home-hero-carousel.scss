@@ -1,0 +1,78 @@
+.home-hero-carousel {
+  background-image: url("../images/home-hero-bg.jpg");
+  background-repeat: no-repeat;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  padding: 9rem 0 7rem;
+  color: $white;
+  position: relative;
+  background-size: cover;
+  @include media-breakpoint-down(md) {
+    background-position-y: bottom;
+    background-size: cover;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 1.5rem;
+    
+    background-image: url("../images/hero-misc.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    width: 200px;
+    height: 660px;
+    pointer-events: none;
+  }
+  &__content {
+    padding-left: 2rem;
+    border-left: 3px solid $primary;
+    @include media-breakpoint-down(md) {
+      border-left: none;
+    }
+  }
+  &__product-logo {
+    margin-bottom: 1rem;
+    width: 170px;
+  }
+  &__description {
+    margin-bottom: 2rem;
+  }
+  &__link {
+  }
+  &__image {
+    width: 100%;
+  }
+  &__model {
+    font-family: $KamerikHeavy;
+    font-size: 10rem;
+    //font-style: italic;
+    position: relative;
+    display: inline-block;
+    transform: skew(-7deg, 0);
+    line-height: 1;
+    &--small {
+      font-size: 4.5rem;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: calc(100% + 2rem);
+      background: url(../images/basic-hero-title-misc.svg);
+      background-repeat: no-repeat;
+      width: 120px;
+      height: 48px;
+      margin-top: -24px;
+    }
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+  }
+  .carousel-indicators {
+    bottom: -2rem;
+  }
+}

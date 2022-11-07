@@ -1,0 +1,7 @@
+<a id="cart-button"
+  class="{{ woo.cart.is_empty ? 'button button--passive' : 'button' }}"
+  href="{{ fn('wc_get_cart_url') }}">
+
+  <span>Cart</span>
+  <b>({{ woo.cart.get_cart_contents_count }})</b>
+</a>

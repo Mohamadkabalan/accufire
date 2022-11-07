@@ -1,0 +1,63 @@
+<div class="products pb-5">
+  <div class="container body-container pb-5">
+  {% for category in categories %}
+    <div class="section-title__container mt-5">
+      <a href="/product-category/{{ category.slug }}/" class="section-title">
+        {{ category.name }}
+      </a>
+      {# <p class="section-subtitle">{{ category.description }}</p> #}
+    </div>
+
+    {% if category.products | length is divisible by(3) %}
+    {% set counter = 'three' %}
+    {% set nb_of_columns = 4 %}
+    {% set inner_columns = 12 %}
+    {% set add_class = '' %}
+    {% elseif category.products | length is divisible by(2) %}
+    {% set counter = 'two' %}
+    {% set nb_of_columns = 6 %}
+    {% set inner_columns = 12 %}
+    {% set add_class = '' %}
+    {% elseif category.products | length == 1 %}
+    {% set counter = 'one' %}
+    {% set nb_of_columns = 12 %}
+    {% set inner_columns = 6 %}
+    {% set add_class = 'product-teaser--one' %}
+    {% else %}
+    {% set counter = 'three' %}
+    {% set nb_of_columns = 4 %}
+    {% set add_class = '' %}
+    {% endif %}
+    <div class="product-teaser__container">
+      <div class="row gx-5 gy-5">
+        {% for product_category in category.products %}
+        {# {{ dump(product_category) }} #}
+        <div class="col-md-{{ nb_of_columns }}">
+          <div class="product-teaser {{ add_class }}">
+            <div class="product-teaser__image">
+            <a href="{{ product_category.get_slug }}">{{ product_category.get_image }}</a>
+          </div>
+            <div class="product-teaser__content">
+              <a href="{{ product_category.get_slug }}" class="product-teaser__title">
+                <p>{{ product_category.get_name }}</p>
+              </a>
+              <p class="product-teaser__description">{{ product_category.get_short_description }}</p>
+              <div class="product-teaser__content-footer">
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    <p class="product-teaser__price">${{ product_category.get_price }}</p>
+                  </div>
+                  <div class="col d-flex justify-content-end"><a href="{{ product_category.get_slug }}"
+                      class="btn btn-primary btn-plus">Learn More</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  
+  {% endfor %}
+  </div>
+</div>

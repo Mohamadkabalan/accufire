@@ -1,0 +1,7 @@
+{
+    "name": "me/twoa_commerce",
+    "description": "2A Commerce Gateway",
+    "version": "2.3.3",
+    "type": "wordpress-plugin",
+    "require": {}
+}

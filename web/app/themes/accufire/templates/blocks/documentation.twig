@@ -1,0 +1,24 @@
+<div class="documentation">
+    <div class="container">
+        <h1 class="section-title documentation__title">{{fields.title}}</h1>
+        <p class="section-subtitle documentation__subtitle">{{fields.subtitle}}</p>
+        <div class="documentation__list">
+            {% for item in fields.documents %}
+            <div class="documentation__list-item">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <p class="documentation__list-item-title">{{Post(item.document).title}}</p>
+                    </div>
+                    <div class="col">
+                        <p class="documentation__list-item-date">{{Post(item.document).date}}</p>
+                    </div>
+                    <div class="col d-flex justify-content-end">
+                        <a href="{{ Post(item.document).get_field('file') }}" target="_blank" class="btn btn-sm btn-primary btn-plus">Download</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>

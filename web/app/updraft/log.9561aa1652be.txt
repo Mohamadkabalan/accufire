@@ -1,0 +1,33 @@
+0000.009 () Opened log file at time: Mon, 19 Jul 2021 08:10:52 +0000 on http://localhost/accufire/web/wp
+0000.009 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.59 WP: 5.7.2 PHP: 7.4.11 (apache2handler, Windows NT LAPTOP-CO84CEJL 10.0 build 19042 (Windows 10) AMD64) MySQL: 10.4.14-MariaDB (max packet size=268435456) WPLANG: en_US Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.4.11 safe_mode: 0 max_execution_time: 900 memory_limit: 5120M (used: 69M | 8M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.009 () Free space on disk containing Updraft's temporary directory: 56837.5 MB
+0000.025 () Restore setup, now closing connection and starting restore over AJAX.
+0000.012 () Opened log file at time: Mon, 19 Jul 2021 08:10:53 +0000 on http://localhost/accufire/web/wp
+0000.013 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.59 WP: 5.7.2 PHP: 7.4.11 (apache2handler, Windows NT LAPTOP-CO84CEJL 10.0 build 19042 (Windows 10) AMD64) MySQL: 10.4.14-MariaDB (max packet size=268435456) WPLANG: en_US Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.4.11 safe_mode: 0 max_execution_time: 900 memory_limit: 5120M (used: 67.1M | 12M) multisite: N openssl: OpenSSL 1.1.1g  21 Apr 2020 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.013 () Free space on disk containing Updraft's temporary directory: 56836.6 MB
+0000.028 () Ensuring WP_Filesystem is setup for a restore
+0000.031 () WP_Filesystem is setup and ready for a restore
+0000.052 () Restore job started. Entities to restore: plugins. Restore options: {"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0000.057 () Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.058 () Entity: plugins
+0000.058 () restore_backup(backup_file=backup_2021-07-19-0800_UDI_41785ba53b18-plugins.zip, type=plugins, info=a:2:{s:4:"path";s:40:"C:\xampp\htdocs\accufire/web/app/plugins";s:11:"description";s:7:"Plugins";}, last_one=1)
+0000.059 () Unpacking backup... (backup_2021-07-19-0800_UDI_41785ba53b18-plugins.zip, 31.9 MB)
+0000.061 () Unzipping backup_2021-07-19-0800_UDI_41785ba53b18-plugins.zip to C:/xampp/htdocs/accufire/web/app/upgrade/041ea6af/ using UpdraftPlus_ZipArchive, starting index 0
+0000.574 () Unzip progress: 1002 out of 6497 files (2.1 MB, plugins/elementor/assets/shapes/arrow-negative.svg)
+0004.407 () Unzip progress: 2003 out of 6497 files (36 MB, plugins/elementor-pro/modules/woocommerce/conditions/woocommerce.php)
+0008.613 () Unzip progress: 3004 out of 6497 files (50.3 MB, plugins/updraftplus/vendor/guzzle/guzzle/src/Guzzle/Cache/Zf2CacheAdapter.php)
+0012.887 () Unzip progress: 4005 out of 6497 files (66.3 MB, plugins/updraftplus/languages/updraftplus-pt_BR.po)
+0017.197 () Unzip progress: 5006 out of 6497 files (84 MB, plugins/revslider/public/assets/assets/svg/communication/ic_portable_wifi_off_24px.svg)
+0021.358 () Unzip progress: 6007 out of 6497 files (105.3 MB, plugins/revslider/public/assets/assets/svg/av/ic_forward_5_24px.svg)
+0022.651 () Unzip progress: 6497 out of 6497 files (105.4 MB, plugins/revslider/public/assets/assets/svg/hardware/ic_headset_mic_24px.svg)
+0022.661 () Moving old data: filesystem method / updraft_dir is potentially possible
+0022.662 () Moving old data: can potentially use wp_filesystem method / -old
+0022.662 () Moving old data out of the way...
+0029.125 () Top-level entities being moved: .gitkeep, advanced-custom-fields-pro, all-in-one-wp-security-and-firewall, custom-post-type-ui, disable-comments, elementor, getwid, google-analytics-for-wordpress, jetpack, kadence-blocks, loginizer, themify-wc-product-filter, timber-library, twoa_commerce, updraftplus, w3-total-cache, woocommerce, wordpress-seo
+0029.164 () Moving unpacked backup into place...
+0030.222 () Top-level entities being moved: all-in-one-wp-migration, anywhere-elementor, astra-widgets, chatbot-com-ai-platform, classic-editor, contact-form-7, custom-fonts, elementor, elementor-pro, essential-addons-for-elementor-lite, exclusive-addons-for-elementor, index.php, premium-addons-for-elementor, revslider, updraftplus
+0030.245 () Cleaning up rubbish...
+0030.250 () Elementor's clear cache method exists and will be executed
+0030.257 () Error (Error) occurred when cleaning up third-party cache (clear_elementor_cache) during post-restore: Class 'Elementor\Core\Page_Assets\Data_Managers\Base' not found (Code: 0, line 174 in C:\xampp\htdocs\accufire\web\app\plugins\elementor\core\files\manager.php)
+0030.261 () Restore successful!
+0030.261 () Restore successful

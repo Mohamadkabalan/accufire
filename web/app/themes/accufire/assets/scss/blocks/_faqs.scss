@@ -1,0 +1,29 @@
+.faqs {
+    padding: 3rem 0;
+    &__title {
+        text-align: center;
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    .accordion {
+        margin-top: 3rem;
+    }
+    .accordion-button {
+        border: none;
+        background: transparent;
+        padding: 0;
+        text-transform: uppercase;
+        font-weight: $font-bold;
+        width: 100%;
+        text-align: left;
+    }
+    .accordion-header {
+        font-size: $font-lg;
+        margin: 0;
+        padding: 1rem 0;
+    }
+    .accordion-item {
+        border-bottom: 1px solid rgba($black, 0.2);
+    }
+}

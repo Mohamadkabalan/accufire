@@ -1,0 +1,5 @@
+{% if menu %}
+	<ul class="navbar-nav navbar-nav__main">
+	  {% include "partial/menu-items.twig" with {'items': items} %}
+	</ul>
+{% endif %}

@@ -1,0 +1,62 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="basic-hero basic-hero--dark">
+	<h1 class="basic-hero__title">Products</h1>
+</div>
+
+
+
+
+<article itemscope itemtype="http://schema.org/Product" class="wc-single-product {{ post.class }}">
+	<div class="wc-single-product__body">
+		<div class="container-xl body-container">
+			{% do action('woocommerce_before_single_product') %}
+			<div class="row">
+				<div class="col-md-6 mb-5 mb-md-0">
+					<div class="wc-single-product__image mb-5">
+						<img src="{{ post.thumbnail.src('shop_single') }}" id="main-image" />
+						{% do action('woocommerce_before_single_product_summary') %}
+					</div>
+					{% if post.meta('product_downloads') %}
+					<div class="wc-single-product__downloads">
+						<h4>Downloads</h4>
+						{% for item in post.meta('product_downloads') %}
+							<a href="{{ item.download.url }}" class="btn btn-plus btn-primary">{{ item.download_title}}</a>
+						{% endfor %}
+					</div>
+					{% endif %}
+
+				</div>
+				<div class="col-md-6">
+					<div class="wc-single-product__summary">
+						{% do action('woocommerce_single_product_summary') %}
+						{% do action('woocommerce_after_single_product_summary') %}
+					</div>
+				</div>
+			</div>
+			<meta itemprop="url" content="{{ post.link }}" />
+
+			{% if post.meta('product_video') %}
+			<div class="wc-single-product__video py-5">
+					<div class="wp-block-embed__wrapper">
+						{{ post.meta('product_video') }}
+					</div>
+			</div>
+			{% endif %}
+
+			<div class="wc-single-product__related">
+				{% do action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15) %}
+			</div>
+		</div>
+	</div>
+	<div class="d-flex justify-content-center pb-5">
+		<a href="#body">
+			<img src="{{ theme.link }}/assets/images/scroll-top-button.svg" width="100px" alt="">
+		</a>
+	</div>
+</article>
+
+{% do action('woocommerce_after_single_product') %}
+
+{% endblock %}

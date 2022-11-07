@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+@font-face {
+  font-family: "Kamerik";
+  src: url("../fonts/Kamerik-105-Book.woff2") format("woff2"), url("../fonts/Kamerik-105-Book.woff") format("woff");
+}
+
+@font-face {
+  font-family: "KamerikBold";
+  src: url("../fonts/Kamerik-105-Bold.woff2") format("woff2"), url("../fonts/Kamerik-105-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "KamerikHeavy";
+  src: url("../fonts/Kamerik-105-Heavy.woff2") format("woff2"), url("../fonts/Kamerik-105-Heavy.woff") format("woff");
+}
+
+$KamerikBold: "KamerikBold";
+$Kamerik: "Kamerik";
+$KamerikHeavy: "KamerikHeavy";
+$Montserrat: "Montserrat";
+
+$fontawesome-pro: "Font Awesome 5 Pro";
+
+$font-xxxl: 5rem;
+$font-xxl: 3.5rem;
+$font-xl: 2rem;
+$font-lg: 1.5rem;
+$font-md: 1rem;
+$font-sm: 0.875rem;
+
+$font-light: 300;
+$font-regular: 400;
+$font-bold: 700;
+$font-heavy: 900;
+
+.font-xxxl {
+  font-size: $font-xxxl;
+}
+.font-xxl {
+  font-size: $font-xxl;
+}
+.font-xl {
+  font-size: $font-xl;
+}
+.font-lg {
+  font-size: $font-lg;
+}
+.font-md {
+  font-size: $font-md;
+}
+.font-sm {
+  font-size: $font-sm;
+}
+
+
+/* Title skew */
+%skew-title {
+  -webkit-transform: rotate(-7deg) skew(-7deg, 0);
+  -moz-transform: rotate(-7deg) skew(-7deg, 0);
+  -ms-transform: rotate(-7deg) skew(-7deg, 0);
+  -o-transform: rotate(-7deg) skew(-7deg, 0);
+  transform: rotate(-7deg) skew(-7deg, 0);
+}

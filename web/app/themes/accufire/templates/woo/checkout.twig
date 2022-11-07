@@ -1,0 +1,56 @@
+{% block content %}
+    
+
+<div class="basic-hero basic-hero--small basic-hero--dark" style="background-image: url({{ theme.link }}/assets/images/internal-page-bg.jpg);">
+  <h1 class="basic-hero__title">{{ post.title }}</h1>
+</div>
+        <div class="wc-checkout l-cs--c">
+            <main role="main">
+                <div class="container-xl">
+                  {% do action('woocommerce_before_checkout_form') %}
+                  <form name="checkout" method="post" class="checkout woocommerce-checkout" action="{{ action }}" enctype="multipart/form-data">
+                    <div class="wc-checkout__content">
+                        <div class="row">
+                            {% if show_fields == true %}
+                            {% do action('woocommerce_checkout_before_customer_details') %}        
+                            <div class="col-md">
+                                {% do action('woocommerce_checkout_billing') %}
+                                {% do action('woocommerce_checkout_shipping') %}
+                            </div>
+                            {% do action('woocommerce_checkout_after_customer_details') %}
+                            {% endif %}
+        
+                            <div class="col-md-5">
+                                <div class="wc-checkout__summary">
+                                <h3 id="order_review_heading" class="wc-checkout__subtitle">Summary</h3>
+                                <aside role="complementary">
+
+                                    {% do action('woocommerce_checkout_before_order_review') %}
+                                    
+
+                                    <div id="order_review" class="woocommerce-checkout-review-order">
+                                        {% do action('woocommerce_checkout_order_review') %}
+                                    </div>
+
+
+                    
+                                    {% do action('woocommerce_checkout_after_order_review') %}
+                                    {% do action('woocommerce_after_checkout_form', checkout) %}
+                                </aside>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                  </form>
+                </div>
+            </main>
+
+
+            
+
+        </div>
+
+    
+
+{% endblock %}

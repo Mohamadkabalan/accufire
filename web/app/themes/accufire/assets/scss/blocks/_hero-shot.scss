@@ -1,0 +1,28 @@
+.hero-shot {
+  margin: 40px auto;
+  .orange-separator {
+    height: 3px;
+    background: #f78930;
+    width: 40vw;
+    margin: 50px auto;
+  }
+  .hero-img {
+    background-image: url('../images/hero-section.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 40vw;
+    margin: 50px auto 0;
+  }
+  .back-to-top {
+    text-align: center;
+    margin: 50px auto;
+    a {
+      text-decoration: none;
+      color: #000000;
+      svg {
+        color: #f78930;
+        margin-right: 10px;
+      }
+    }
+  }
+}

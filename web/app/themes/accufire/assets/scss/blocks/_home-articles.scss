@@ -1,0 +1,46 @@
+.home-articles {
+    padding: 5rem 0;
+    background-color: $white-05;
+    &__title {
+        text-align: center;
+        font-size: $font-xxl;
+        text-transform: uppercase;
+        color: $primary;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 50%;
+            height: 0.25rem;
+            top: 0;
+        }
+    }
+    &__description {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    &__teaser {
+        border: 1px solid $gray-300;
+        &-image {
+            width: 100%;
+        }
+        &-content {
+            padding: 1.5rem;
+            background: $white;
+        }
+        &-date {
+            margin-bottom: 0;
+            text-transform: uppercase;
+            font-weight: $font-bold;
+        }
+        &-title {
+            margin-bottom: 0;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: $font-bold;
+        }
+        &-preview {
+            margin-bottom: 0;
+        }
+    }
+}

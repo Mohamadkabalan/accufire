@@ -1,0 +1,102 @@
+<div class="l-cs">
+    <main role="main">
+
+      {% if order == true %}
+
+        {% if status == 'failed' %}
+
+        <div class="basic-hero basic-hero--dark"
+            style="background-image: url({{ theme.link }}/assets/images/internal-page-bg.jpg);">
+            <h1 class="basic-hero__title">Checkout</h1>
+        </div>
+
+        <div class="main__content py-5">
+            <div class="container">
+                <h1>Something went wrong</h1>
+                <p>Something went wrong while attempting to process your order. Please Try again.</p>
+                <p>
+                    <a href="{{ payment_url }}" title="Opnieuw proberen te betalen" class="btn btn-primary">
+                        Try Again
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        {% else %}
+
+        <div class="basic-hero basic-hero--dark"
+            style="background-image: url({{ theme.link }}/assets/images/internal-page-bg.jpg);">
+            <h1 class="basic-hero__title">Order Confirmation</h1>
+        </div>
+
+        <div class="main__content py-5">
+            <div class="container">
+                <h1 class="text-primary">Thank you for your order!</h1>
+                <p>We have received your order and have sent a confirmation email to {{ email }}.</p>
+              <div class="woocommerce-order-details">
+                  <h3 class="woocommerce-order-details__title">
+                      Order Information
+                  </h3>
+                  <table class="table">
+                      <tr>
+                          <td>
+                              Order number:
+                          </td>
+                          <td>
+                              {{ ordernumber }}
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              Date:
+                          </td>
+                          <td>
+                              {{ date }}
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              E-mail:
+                          </td>
+                          <td>
+                              {{ email }}
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              Total:
+                          </td>
+                          <td>
+                              {{ total }}
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              Payment method:
+                          </td>
+                          <td>
+                              {{ payment_method_title }}
+                          </td>
+                      </tr>
+                  </table>
+              </div>
+              {% do action('woocommerce_thankyou_'.payment_method, order_id) %}
+              {% do action('woocommerce_thankyou', order_id) %}
+            </div>
+        </div>
+        {% endif %}
+
+      {% else %}
+
+      <h1 class="main__header">
+          Thanks for your order!
+      </h1>
+
+      <div class="main__content">
+          <p>We have received your order.</p>
+      </div>
+
+      {% endif %}
+
+    </main>
+</div>

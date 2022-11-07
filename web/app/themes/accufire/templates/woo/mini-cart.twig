@@ -1,0 +1,9 @@
+<aside class="cart-menu">
+  {% include 'woo/_cart-button.twig' %}
+
+  <div class="cart-dialog">
+    {# The product list is actually an existing widget #}
+    {{ fn('the_widget', 'WC_Widget_Cart' ) }}
+    <a href="{{ fn('wc_get_cart_url') }}">view cart</a>
+  </div>
+</aside>

@@ -1,0 +1,20 @@
+.support-header {
+  text-align: center;
+  background-image: url("../images/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 45vw;
+  z-index: 5 !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .support-header h2 {
+    color: #ffffff;
+    font-size: 6vw; }
+  .support-header span {
+    color: gray;
+    font-size: 2vw;
+    margin: 40px; }
