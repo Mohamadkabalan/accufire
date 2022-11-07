@@ -1,0 +1,109 @@
+.social-media {
+    padding: $section-padding;
+    background: $gray-300;
+    &__title {
+        font-size: $font-lg;
+        font-weight: $font-bold;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+        background: $white;
+        text-decoration: none;
+        &:hover {
+            @include box-shadow-mixin;
+        }
+        &-icon {
+            height: 3rem;
+            margin-bottom: 0.5rem;
+            i {
+                font-size: 3rem;    
+            }
+        }
+        &-title {
+            font-size: 1.125rem;
+            font-weight: $font-bold;
+            margin-bottom: 0.5rem;
+        }
+        &--facebook {
+            color: $color-facebook;
+            &:hover {
+                color: darken($color-facebook, 10%);
+            }
+        }
+        &--twitter {
+            color: $color-twitter;
+            &:hover {
+                color: darken($color-twitter, 10%);
+            }
+        }
+        &--instagram {
+            color: $color-instagram;
+            &:hover {
+                color: darken($color-instagram, 10%);
+            }
+        }
+        &--parler {
+            color: $color-parler;
+            &:hover {
+                color: darken($color-parler, 10%);
+            }
+        }
+        &--minds {
+            color: $color-minds;
+            &:hover {
+                color: darken($color-minds, 10%);
+            }
+        }
+        &--tumblr {
+            color: $color-tumblr;
+            &:hover {
+                color: darken($color-tumblr, 10%);
+            }
+        }
+        &--gab {
+            color: $color-gab;
+            &:hover {
+                color: darken($color-gab, 10%);
+            }
+        }
+        &--mewe {
+            color: $color-mewe;
+            &:hover {
+                color: darken($color-mewe, 10%);
+            }
+        }
+        &--telegram {
+            color: $color-telegram;
+            &:hover {
+                color: darken($color-telegram, 10%);
+            }
+        }
+        &--youtube {
+            color: $color-youtube;
+            &:hover {
+                color: darken($color-youtube, 10%);
+            }
+        }
+        &--full30 {
+            color: $color-full30;
+            &:hover {
+                color: darken($color-full30, 10%);
+            }
+        }
+        &--gunstreamer {
+            color: $color-gunstreamer;
+            &:hover {
+                color: darken($color-gunstreamer, 10%);
+            }
+        }
+        &--lbry {
+            color: $color-lbry;
+            &:hover {
+                color: darken($color-lbry, 10%);
+            }
+        }
+    }
+}

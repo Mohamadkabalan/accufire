@@ -1,0 +1,237 @@
+// The cart table
+.cart {
+    width: 100%;
+
+    tr {
+
+        th,
+        td {
+            padding: pt(1) pt(2);
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    tbody {
+
+        tr {
+
+            &:first-child {
+
+                td {
+                    padding-top: pt(3)
+                }
+            }
+        }
+    }
+
+    th {
+        text-align: left;
+        font-weight: normal;
+        font-size: pt(3);
+
+        &.text--right {
+            text-align: right;
+        }
+    }
+
+    td {
+        vertical-align: top;
+        text-align: left;
+
+        &.text--right {
+            text-align: right;
+        }
+    }
+
+    img {
+        max-width: pt(16);
+        height: pt(16);
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .qty {
+        width: pt(10);
+        margin-bottom: pt(1);
+    }
+
+    .cart-action {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.cart-menu {
+
+  > .button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+ 
+.cart-dialog {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all .25s ease-in-out;
+  overflow-y: auto;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 320px;
+  max-height: 480px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0, .2);
+  
+  &.cart-dialog--active {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+
+  .widgettitle {
+    display: none;
+  }
+
+  .widget {
+    margin-bottom: 0;
+    
+    img {
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      border-radius: 4px;
+    }
+  }
+}
+
+
+.widget_shopping_cart_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+ul.product_list_widget {
+  grid-column: span 2;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  list-style-type: none;
+  
+  img {
+    float: right;
+  } 
+  a {
+    display: block;
+  }
+  li.mini_cart_item {
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    line-height: 1.25;
+  }
+  
+  // clearfix floating image
+  li.mini_cart_item::before,
+  li.mini_cart_item::after {
+    content: " ";
+    display: table;
+  }
+
+  li.mini_cart_item::after {
+    clear: both;
+  }
+
+  a.remove_from_cart_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+    transform: translateX(50%) translateY(-4px);
+    border-radius: 50%;
+  }
+  p {
+    margin: 0.5rem 0;
+  }
+  span.quantity {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 14px;
+  }
+}
+// subtotal
+.woocommerce-mini-cart__total {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0.5rem 0.25rem;
+  padding-left: 1rem;
+  background-color: rgba(black, .1);
+  line-height: 1;
+
+  strong {
+    display: block;
+    font-size: 14px;
+  }
+}
+// checkout button
+p.woocommerce-mini-cart__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  margin: 0;
+  padding: 0.5rem 0.25rem;
+  padding-right: 1rem;
+  background-color: rgba(black, .1);
+  line-height: 1;
+
+  .button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+  }
+
+  .button:not(.checkout) {
+    display: none;
+  }
+
+  .button.checkout {
+    background-color: #0073aa;
+  }
+}
+
+.cart-coupons {
+  .coupon {
+    .apply-coupon{ padding: 4px 20px;}
+  }
+}
+.woocommerce #content table.cart td.actions .input-text, .woocommerce table.cart td.actions .input-text, .woocommerce-page #content table.cart td.actions .input-text, .woocommerce-page table.cart td.actions .input-text {
+  width: 180px;
+}

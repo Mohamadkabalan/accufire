@@ -1,0 +1,30 @@
+.support-faq {
+  .sup-faq-title {
+    .sup-faq-separator {
+      height: 3px;
+      background: #f78930;
+      width: 40vw;
+      margin: 100px auto 50px;
+    }
+    h2 {
+      font-size: 67px;
+      color: #f78930;
+      text-align: center;
+    }
+    p {
+      font-size: 32px;
+      width: 45vw;
+      margin: 5px auto;
+      text-align: center;
+    }
+  }
+  .sup-faq-cnt {
+    margin: 50px auto;
+    .sup-faq-rw {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+

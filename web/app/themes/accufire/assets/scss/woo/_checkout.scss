@@ -1,0 +1,11 @@
+.woocommerce-order-details__title, .woocommerce-column__title {
+    border-bottom: 1px solid $gray-300 !important;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    font-size: $font-lg;
+}
+
+.woocommerce-order-details {
+    margin-bottom: 0;
+    padding-bottom: 1.5rem;
+}

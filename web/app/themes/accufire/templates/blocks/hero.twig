@@ -1,0 +1,31 @@
+{#
+/**
+* Block Name: Example block
+*
+* This is the template that displays the example block.
+*/
+#}
+
+{% if is_preview %}
+<p>I will only appear in the editor.</p>
+{% endif %}
+
+
+<div class="hero {{ fields.is_dark ? 'bg-black' :'' }}" style="background-image: url({{fields.background_image}});">
+    <div class="container-xl">
+        <div class="row">
+            <div class="col {{ fields.alignment == 'left' ? 'col-md-6' :'' }} {{ fields.alignment == 'right' ? 'col-md-6 offset-md-6' :'' }} {{ fields.alignment == 'center' ? 'col-md' :'' }}">
+                <h1 class="hero__title hero__title--skew {{ fields.is_dark ? 'text-white' :'text-black' }} {{ fields.alignment == 'center' ? 'text-center' :'' }}">{{ fields.title}}</h1>
+
+                <ul class="hero__buttons d-flex {{ fields.alignment == 'left' ? 'justify-content-start' :'' }} {{ fields.alignment == 'right' ? 'justify-content-end' :'' }} {{ fields.alignment == 'center' ? 'justify-content-center' :'' }}">
+                    {% for item in fields.hero_buttons %}
+                    <li>
+                        <a href="{{item.button.url}}" target="{{item.button.target}}" class="btn {{ fields.is_dark ? 'btn-outline-white' :'btn-outline-black' }}">{{item.button.title}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>

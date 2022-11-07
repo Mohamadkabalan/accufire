@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <div class="page content-wrapper">
+    <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+      <section class="article-content">
+        <div class="article-body">
+          {% include "blocks/products-header.twig" %}
+          {% include "blocks/products-by-categories.twig" %}
+          {{post.content}}
+          {% include "blocks/hero-shot.twig" %}
+        </div>
+      </section>
+    </article>
+  </div>
+{% endblock %}

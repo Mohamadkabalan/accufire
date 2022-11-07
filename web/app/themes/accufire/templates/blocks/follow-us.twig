@@ -1,0 +1,23 @@
+<div class="follow-us">
+    <div class="container">
+        <h2 class="section-title text-center">{{fields.title}}</h2>
+        <p class="section-subtitle text-center">{{fields.subtitle}}</p>
+        <div class="follow-us__links">
+				{% for item in social_menu.items %}
+				<a href="{{ item.link }}" class="btn btn-link">
+				  {% if item.title == 'Facebook' %}
+				  <i class="fab fa-facebook-f"></i>
+				  {% elseif item.title == 'Instagram' %}
+				  <i class="fab fa-instagram"></i>
+				  {% elseif item.title == 'Youtube' %}
+				  <i class="fab fa-youtube"></i>
+				  {% elseif item.title == 'Twitter' %}
+				  <i class="fab fa-twitter-square"></i>
+				  {% else %}
+				  <i class="fas fa-hashtag"></i>
+				  {% endif %}
+				</a>
+				{% endfor %}
+        </div>
+    </div>
+</div>

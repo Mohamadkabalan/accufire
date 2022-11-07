@@ -1,0 +1,13 @@
+{% if fields.background %}
+<div class="basic-hero basic-hero--{{fields.theme == 'dark' or fields.theme == '' ? 'dark' : 'light'}}" style="background-image: url({{fields.background}});">
+{% else %}
+<div class="basic-hero basic-hero--dark" style="background-image: url({{ theme.link }}/assets/images/internal-page-bg.jpg);">
+{% endif %}
+
+    {% if fields.hero_title %}
+        <h1 class="basic-hero__title">{{fields.hero_title}}</h1>
+    {% else %}
+        <h1 class="basic-hero__title">{{Post('title')}}</h1>
+    {% endif %}
+    
+</div>

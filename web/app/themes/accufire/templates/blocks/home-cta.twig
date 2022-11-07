@@ -1,0 +1,26 @@
+<script type="text/javascript" language="Javascript">
+  (function ($) {
+    $( document ).ready(function() {
+      var clicked = 0;
+      $( "#open-mail" ).click(function() {
+        if(clicked == 0) {
+          loadZCPopup('3z9bacbe28e884643764224e14127e708b3fee936159be078771c423182945e20a','ZCFORMVIEW','3zf525612f6851db80b3194a2514848535');
+          clicked = 1;
+        } else {
+          $('#popup_SF_3z9bacbe28e884643764224e14127e708b3fee936159be078771c423182945e20a').show();
+        }
+      });
+    });
+  }(jQuery));
+</script>
+<!--ZC Popup Code Ends-->
+<div class="home-cta__wrapper">
+  <div class="container">
+    <div class="home-cta">
+      <h3 class="home-cta__subtitle">{{ post.meta('home_cta_subtitle')}}</h3>
+      <h2 class="home-cta__title">{{ post.meta('home_cta_title')}}</h2>
+      <p class="home-cta__description">{{ post.meta('home_cta_description')}}</p>
+      <a id="open-mail" class="home-cta__link btn btn-outline-black btn-plus">{{ post.meta('home_cta_link').title }}</a>
+    </div>
+  </div>
+</div>

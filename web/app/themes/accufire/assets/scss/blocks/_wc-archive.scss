@@ -1,0 +1,50 @@
+.archive {
+    h1 {
+        display: none;
+    }
+    h1.section-title, h1.basic-hero__title {
+        display: block;
+    }
+}
+.wc-archive {
+    padding: 5rem 0;
+    &__tools {
+        margin-bottom: 2rem;
+        height: 52px;
+        .woocommerce-ordering {
+            margin-bottom: 0;
+            .orderby {
+                padding: $input-btn-padding-y $input-btn-padding-x;
+                border-radius: 0;
+                border: 1px solid $gray-300;
+            }
+        }
+        .woocommerce-result-count {
+            margin-bottom: 0;
+        }
+    }
+    &__content {
+        &-items {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1 1 0px;
+            margin: 0;
+            @include media-breakpoint-up(md) {
+                margin: 0 -1rem;
+            }
+            .product {
+                width: 100%;
+                padding: 0 1rem 2rem;
+                @include media-breakpoint-up(md) {
+                    width: 50%;
+                }
+            }
+        }
+        &-filter {}
+    }
+    &__title {
+        color: $black;
+        display: inline-block;
+    }
+}
+

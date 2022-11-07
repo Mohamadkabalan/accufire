@@ -1,0 +1,60 @@
+<div class="footer">
+	<div class="container-xxl">
+		<div class="row">
+			<div class="col-md-auto mb-4 mb-md-0">
+				<div class="footer__info">
+					{{ custom_logo_url }}
+					<p class="pt-3">Accufire Technology Inc. <br>
+						1225 W. College Ave #610. <br>
+						Carrollton, TX 75006
+					</p>
+					<a href="mailto:info@accufiretech.com" target="_blank" class="btn btn-outline-primary btn-plus text-white">Email</a>
+				</div>
+			</div>
+			<div class="col-md-auto mb-4 mb-md-0">
+				<ul class="footer__main-menu">
+				{% include "partial/menu-items.twig" with {'items': items} %}
+				</ul>
+			</div>
+			<div class="col-md-auto mb-4 mb-md-0">
+				<ul class="footer__secondary-menu">
+				{% for item in footer_menu.items %}
+				<li class="nav-item">
+					<a href="{{ item.link }}" class="nav-link">{{ item.title }}</a>
+				</li>
+				{% endfor %}
+				</ul>
+			</div>
+			<div class="col-md">
+				<div class="footer__dealer-login">
+					<a href="/wp-admin" class="btn btn-outline-primary btn-plus text-white btn-accufire-primary">Dealer Login</a>
+				</div>
+				<div class="footer__social">
+				{% for item in social_menu.items %}
+				<a href="{{ item.link }}" class="btn btn-link">
+				  {% if item.title == 'Facebook' %}
+				  <i class="fab fa-facebook-f"></i>
+				  {% elseif item.title == 'Instagram' %}
+				  <i class="fab fa-instagram"></i>
+				  {% elseif item.title == 'Youtube' %}
+				  <i class="fab fa-youtube"></i>
+				  {% elseif item.title == 'Twitter' %}
+				  <i class="fab fa-twitter-square"></i>
+				  {% else %}
+				  <i class="fas fa-hashtag"></i>
+				  {% endif %}
+				</a>
+				{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="row pt-5 align-items-center">
+			<div class="col-md">
+				<p class="footer__copyright"><span class="footer__copyright-title">Accufire Technology</span><span class="mx-3 text-primary">//</span>Copyright {{"now"|date('Y')}}. All rights reserved.<span class="mx-3 text-primary">//</span>Site by <a href="https://2acommerce.com/" target="_blank">2A Commerce</a></p>
+			</div>
+			<div class="col-md-auto">
+				<img src="{{ theme.link }}/assets/images/footer-logo-transparent.svg" width="250px" alt="">
+			</div>
+		</div>
+	</div>
+</div>

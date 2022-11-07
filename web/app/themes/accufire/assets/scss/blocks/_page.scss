@@ -1,0 +1,18 @@
+#content {
+    background: rgba($white, 0.3);
+}
+
+/* .wp-bootstrap-blocks-container {
+    margin-bottom: 0 !important;
+    padding-bottom: 5rem;
+} */
+
+.body-container {
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255,255,255,0.9) 25%, rgba(255,255,255,1) 100%);
+    padding: 0 2.5rem 2.5rem;
+}
+
+.article-body {
+    padding-bottom: 3rem;
+}

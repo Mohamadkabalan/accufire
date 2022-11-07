@@ -1,0 +1,13 @@
+.subscription-form {
+    &__title {
+        font-size: $font-xxl;
+    }
+    &__text {
+        font-size: $font-lg;
+    }
+    &-texture {
+        background: url('/hank/assets/images/texture-black.png') no-repeat;
+        background-size: cover;
+        padding: 6rem 0;
+    }
+}

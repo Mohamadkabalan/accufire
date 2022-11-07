@@ -1,0 +1,78 @@
+<div class="home-hero-carousel">
+  <div id="carouselExampleIndicators" class="carousel slide w-100" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+    {% for key, item in post.meta('hero_items') %}
+      {% if loop.first %}
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{key}}" class="active"
+        aria-current="true" aria-label="Slide {{key}}"></button>
+      {% else %}
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{key}}"
+        aria-label="Slide {{key}}"></button>
+      {% endif %}
+    {% endfor %}
+
+    </div>
+    <div class="carousel-inner">
+
+      {% for item in post.meta('hero_items') %}
+
+      {% if loop.first %}
+      <div class="carousel-item active">
+      {% else %}
+      <div class="carousel-item">
+      {% endif %}
+        <div class="container-xl">
+          <div class="row align-items-center">
+            <div class="col-md mb-4 mb-md-0">
+              <div class="home-hero-carousel__content">
+                <img src="{{ theme.link }}/assets/images/accufire-logo-text.svg" class="home-hero-carousel__product-logo" alt="{{ Image(item.product_logo).alt }}">
+                {% if item.model %}
+                <div>
+                  <p class="home-hero-carousel__model">{{ item.model }}</p>
+                </div>
+                {% endif %}
+                <p class="home-hero-carousel__description">{{ item.description }}</p>
+                <a class="btn btn-primary" href="{{ item.link.url }}">{{ item.link.title }}</a>
+              </div>
+            </div>
+            <div class="col-md">
+              <img src="{{ Image(item.image).src }}" class="home-hero-carousel__image" alt="{{ Image(item.image).alt }}">
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      {% endfor %}
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        let modelText = document.getElementsByClassName('home-hero-carousel__model');
+        let arr = Array.prototype.slice.call( modelText )
+        arr.forEach(modelText => {
+          console.log(modelText.innerText.length);
+          if(modelText.innerText.length > 4) {
+            modelText.classList.add('home-hero-carousel__model--small')
+          }
+        });
+
+    });
+
+</script>

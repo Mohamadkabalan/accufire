@@ -1,0 +1,67 @@
+.cta-image {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 5rem 2rem;
+    background: $gray-900;
+    background-size: cover;
+    color: $white;
+    min-height: 400px;
+    overflow: hidden;
+    &__content {
+        text-align: center;
+        width: 100%;
+        position: relative;
+        transition: all 200ms ease-in-out;
+    }
+    &__title {
+        font-size: $font-xl;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+        font-weight: $font-bold;
+    }
+    &__subtitle {
+        font-weight: $font-bold;
+    }
+    &__buttons {
+        position: absolute;
+        width: 100%;
+        top: 120%;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+    }
+    &__overlay {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 120%;
+        top: 0;
+        left: 0;
+        @include gradient-black-transparent(rgba($black, 0), rgba($black, 0.85), 0%, 100%);
+        transition: all 200ms ease-in-out;
+    }
+    &:hover {
+        .cta-image__content {
+            margin-top: -1rem;
+            transition: all 200ms ease-in-out;
+        }
+        .cta-image__buttons {
+            top: 100%;
+            opacity: 1;
+            transition: all 200ms ease-in-out;
+        }
+        .cta-image__overlay {
+            height: 100%;
+        }
+    }
+}
+
+.cta-full-width {
+    &-texture {
+        padding: 4rem 0;
+        background: url('/hank/assets/images/texture-black.png') no-repeat;
+        background-size: cover;
+    }
+}

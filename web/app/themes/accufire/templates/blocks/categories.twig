@@ -1,0 +1,14 @@
+<div class="categories">
+  <div class="container">
+    <p class="categories__title">{{ post.meta('categories_description')}}</p>
+    <div class="row gx-3 gy-3">
+      {% for category in product_categories %}
+        <div class="col-md-6">
+          <div class="categories__item" style="background-image: url({{category.image}});">
+            <a href="/product-category/{{ category.slug }}" class="categories__link btn btn-outline-primary btn-plus">{{category.name}}</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

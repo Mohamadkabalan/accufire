@@ -1,0 +1,188 @@
+.products-by-categories{
+  .prd-cat-ttl {
+    text-align: center;
+    border-top: solid darkgrey 2px;
+    border-bottom: solid darkgrey 2px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 20px auto;
+    div {
+      div{
+        a {
+          text-decoration: none;
+          span:first-child {
+            font-size: 67px;
+            color: #f78930;
+            text-align: center;
+            text-transform: uppercase;
+          }
+        }
+        span:nth-child(2) {
+          font-size: 32px;
+          width: 45vw;
+          margin: 5px auto;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .one-product-per-row {
+    margin-bottom: 20px;
+    .my-prd-img {
+      img {
+        height: 400px;
+        width: 400px;
+      }
+    }
+    .my-prd-txt {
+      span:first-child {
+        color: #f78930;
+        font-size: 36px;
+      }
+      span:nth-child(2) {
+        padding-bottom: 20px;
+      }
+      div {
+        margin: 50px auto 10px;
+        padding: 0;
+        div {
+          margin: 0;
+          padding: 8px 0;
+          align-items: center;
+          border-top: solid #000000 1px;
+          border-bottom: solid #000000 1px;
+          .my-prd-prc {
+            border: none;
+            align-items: center;
+            padding-left: 10px;
+            p {
+              margin: 0;
+            }
+          }
+          .my-prd-btn {
+            border: none;
+            align-items: center;
+            padding-right: 10px;
+            a {
+              float: right;
+              text-decoration: none;
+              color: #242321;
+              font-size: 18px;
+              padding: 10px 40px;
+              background-color: #f78930;
+              text-shadow: #000000 1px 1px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.two-product-per-row {
+  margin-bottom: 20px;
+  .my-prd-img {
+    img {
+      height: 400px;
+      width: 400px;
+    }
+  }
+  .my-prd-txt {
+    span:first-child {
+      color: #f78930;
+      font-size: 36px;
+    }
+    span:nth-child(2) {
+      padding-bottom: 20px;
+    }
+    div {
+      margin: 50px auto 10px;
+      padding: 0;
+      div {
+        margin: 0;
+        padding: 8px 0;
+        align-items: center;
+        border-top: solid #000000 1px;
+        border-bottom: solid #000000 1px;
+        .my-prd-prc {
+          border: none;
+          align-items: center;
+          padding-left: 10px;
+          p {
+            margin: 0;
+          }
+        }
+        .my-prd-btn {
+          border: none;
+          align-items: center;
+          padding-right: 10px;
+          a {
+            float: right;
+            text-decoration: none;
+            color: #242321;
+            font-size: 18px;
+            padding: 10px 40px;
+            background-color: #f78930;
+            text-shadow: #000000 1px 1px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.three-product-per-row {
+  margin-bottom: 20px;
+  .my-prd-img {
+    img {
+      height: 400px;
+      width: 400px;
+    }
+  }
+  .my-prd-txt {
+    span:first-child {
+      color: #f78930;
+      font-size: 36px;
+    }
+    span:nth-child(2) {
+      padding-bottom: 20px;
+    }
+    div {
+      margin: 50px auto 10px;
+      padding: 0;
+      div {
+        margin: 0;
+        padding: 8px 0;
+        align-items: center;
+        border-top: solid #000000 1px;
+        border-bottom: solid #000000 1px;
+        .my-prd-prc {
+          display: none;
+          border: none;
+          align-items: center;
+          padding-left: 10px;
+          p {
+            margin: 0;
+          }
+        }
+        .my-prd-btn {
+          float: left !important;
+          border: none;
+          align-items: center;
+          padding-right: 10px;
+          a {
+            float: right;
+            text-decoration: none;
+            color: #242321;
+            font-size: 18px;
+            padding: 10px 40px;
+            background-color: #f78930;
+            text-shadow: #000000 1px 1px 0;
+          }
+        }
+      }
+    }
+  }
+}

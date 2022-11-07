@@ -1,0 +1,45 @@
+.support-documentation {
+  .sup-doc-title {
+    h2 {
+      font-size: 67px;
+      color: #f78930;
+      text-align: center;
+    }
+    p {
+      font-size: 32px;
+      margin: 5px auto 30px;
+      text-align: center;
+    }
+  }
+  .sup-doc-cnt {
+    .sup-doc-rw {
+      border-top: solid lightgrey 2px;
+      padding: 12px 0;
+      display: flex;
+      align-items: center;
+      .sup-doc-txt {
+        span {
+          padding-left: 0;
+          span {
+            color: #f78930;
+          }
+        }
+      }
+      .sup-doc-btn {
+        padding-right: 0;
+        a {
+          float: right;
+          text-decoration: none;
+          color: #242321;
+          font-size: 18px;
+          padding: 8px 40px;
+          background-color: #f78930;
+          text-shadow: #000000 1px 1px 0;
+        }
+      }
+    }
+    .sup-doc-rw:last-child {
+      border-bottom: solid lightgrey 2px;
+    }
+  }
+}

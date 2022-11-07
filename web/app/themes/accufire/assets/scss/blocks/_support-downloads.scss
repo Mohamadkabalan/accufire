@@ -1,0 +1,59 @@
+.support-downloads {
+  .dl-title {
+    text-align: center;
+    .dl-orange-separator {
+      height: 3px;
+      background: #f78930;
+      width: 40vw;
+      margin: 50px auto;
+    }
+    h2 {
+      font-size: 67px;
+      color: #f78930;
+      text-align: center;
+    }
+    span {
+      font-size: 32px;
+      width: 45vw;
+      margin: 5px auto;
+      text-align: center;
+    }
+  }
+  .sw-fw-sec {
+    margin: 50px auto;
+    .sw-sec, .fw-sec {
+      text-align: center;
+      background-image: url("../images/dark-bg.png");
+      background-repeat: no-repeat;
+      height: 20vw;
+      padding-right: 40px;
+      p:nth-child(2) {
+        font-size: 28px;
+        color: #f78930;
+        margin-bottom: 40px;
+      }
+      p:nth-child(3) {
+        font-size: 18px;
+        color: #ffffff;
+        margin-bottom: 40px;
+      }
+      a {
+        text-decoration: none;
+        color: #242321;
+        font-size: 18px;
+        padding: 10px 40px;
+        background-color: #f78930;
+        text-shadow: #000000 1px 1px 0;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

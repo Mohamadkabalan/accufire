@@ -1,0 +1,26 @@
+<div class="downloads">
+    <div class="container">
+        <h1 class="section-title text-center">{{fields.title}}</h1>
+        <p class="section-subtitle text-center">{{fields.subtitle}}</p>
+        <div class="downloads__content">
+            <div class="row align-items-stretch">
+                {% for item in fields.downloads_blocks %}
+                <div class="col">
+                    <div class="downloads__item">
+                        {% if item.image %}
+                        <div class="downloads__image">
+                            <img src="{{ Image(item.image).src}}" alt="">
+                        </div>
+                        {% endif %}
+                        <h2 class="downloads__title">{{item.title}}</h2>
+                        <p class="downloads__description">{{item.description}}</p>
+                        {% if item.button %}
+                        <a href="{{ item.button.url }}" class="btn btn-primary btn-plus">{{ item.button.title }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

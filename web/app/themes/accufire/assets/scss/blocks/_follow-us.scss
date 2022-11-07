@@ -1,0 +1,14 @@
+.follow-us {
+    padding: 5rem 0;
+    &__links {
+        text-align: center;
+        a {
+            border-right: 2px solid $primary;
+            color: $black;
+            font-size: 2rem;
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+
+<div class="basic-hero basic-hero--dark">
+    <h1 class="basic-hero__title">Products</h1>
+</div>
+
+<div class="wc-archive">
+
+  <div class="container body-container">
+    <div class="section-title__container">
+      <h1 class="section-title">
+        {{ title }}
+      </h1>
+      <p class="section-subtitle">{{ category.description }}</p>
+    </div>
+
+    <div class="wc-archive__content">
+      <div class="row">
+        <div class="col-md">
+          <div class="wc-archive__content-items">
+          {# products list #}
+          {% for post in products %}
+          {% include ["woo/tease-product.twig"] %}
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

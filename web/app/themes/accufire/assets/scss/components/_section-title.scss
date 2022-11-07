@@ -1,0 +1,25 @@
+.section-title {
+    font-size: $font-xxl;
+    text-transform: uppercase;
+    color: $primary;
+    font-family: $KamerikHeavy;
+    @include media-breakpoint-down(md) {
+      font-size: $font-xl;
+    }
+    &__container {
+      border-top: 1px solid $gray-300;
+      border-bottom: 1px solid $gray-300;
+      padding: 1rem 0;
+      margin-bottom: 3rem;
+      .section-title,
+      .section-subtitle {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .section-subtitle {
+    font-size: $font-lg;
+  }

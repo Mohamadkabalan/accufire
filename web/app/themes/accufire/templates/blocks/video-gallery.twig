@@ -1,0 +1,68 @@
+<div class="video-gallery">
+    <div class="container">
+        <div class="video-gallery__main">
+            <iframe id="video-gallery-main" src="{{fields.videos[0].video.video_url}}" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div class="row gx-3 gy-3">
+            {% for key, item in fields.videos %}
+            <div class="col-md-3">
+                <div class="video-gallery__teaser" id="video-gallery-teaser-{{key}}">
+                    {% if item.video.placeholder_image %}
+                    <img src="{{ Image(item.video.placeholder_image).src}}" alt="{{item.video.title}}"
+                        class="video-gallery__teaser-image">
+                    {% else %}
+                    <img src="{{ theme.link }}/assets/images/video-placeholder.png" alt="{{item.video.title}}"
+                        class="video-gallery__teaser-image">
+                    {% endif %}
+                    <div id="video-url" class="video-gallery__teaser-url">{{item.video.video_url}}</div>
+                    <div class="video-gallery__teaser-content">
+                        <p class="video-gallery__teaser-date">{{item.video.date}}</p>
+                        <p class="video-gallery__teaser-title">{{item.video.title}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% if fields.see_more_link.url %}
+        <div class="text-center pt-5">
+            <a href="{{ fields.see_more_link.url}}" target="{{ fields.see_more_link.target}}" class="btn btn-outline-primary">{{ fields.see_more_link.title}}</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        let teaserVideo = document.getElementsByClassName('video-gallery__teaser');
+        let mainVideo = document.getElementById('video-gallery-main');
+
+        var mainVideoPosition = mainVideo.offsetTop;
+
+        let originalVideoUrl = teaserVideo;
+        originalVideoUrl.toString().replace("watch?v=", "embed/");
+
+        let originalMainVideoUrl = document.getElementById('video-gallery-main').getAttribute('src');
+        originalMainVideoUrl = originalMainVideoUrl.replace("watch?v=", "embed/");
+
+        mainVideo.setAttribute("src", originalMainVideoUrl);
+
+
+        let clickedVideoUrl = teaserVideo;
+
+        Array.from(clickedVideoUrl).forEach((item) => {
+            item.classList.add('testclass');
+            item.querySelector('.video-gallery__teaser-url').addEventListener('click', (e) => {
+                e.preventDefault();
+                let activeUrl = e.target.innerText.toString().replace('watch?v=', 'embed/');
+                mainVideo.src = activeUrl;
+                document.getElementById('video-gallery-main').scrollIntoView();
+            });
+        });
+
+    });
+</script>

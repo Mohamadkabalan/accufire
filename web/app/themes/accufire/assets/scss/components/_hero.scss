@@ -1,0 +1,32 @@
+.hero {
+    padding: $section-padding;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__buttons {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        padding-top: 3rem;
+        a {
+            margin-left: 1rem;
+        }
+    }
+    &__title {
+        line-height: 1;
+        font-size: $font-xxl;
+        text-align: left;
+        &--skew {
+            @extend %skew-title;
+        }
+        @include media-breakpoint-up(md) {
+            font-size: $font-xxxl;
+        }
+        i {
+            margin-right: 1rem;
+        }
+    }
+    &__subtitle {
+        font-size: $font-xl;
+    }
+}

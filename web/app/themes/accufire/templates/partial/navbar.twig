@@ -1,0 +1,29 @@
+<nav id="nav-main" role="navigation" class="navbar navbar-expand-md navbar-dark">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="{{ site.url }}">{{ custom_logo_url }}</a>
+		{% if site.description %}
+		<p class="mb-0 text-white d-none d-md-inline-block">{{ site.description }}</p>
+		{% endif %}
+		{% if '/cart/' | is_current_url or '/checkout/' | is_current_url %}
+
+		{% else %}
+			{% include "woo/mini-cart.twig" %}
+		{% endif %}
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<i class="far fa-bars"></i>
+		</button>
+		{% if site.description %}
+		<p class="mb-0 text-white d-block d-md-none text-center w-100">{{ site.description }}</p>
+		{% endif %}
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		{% if '/cart/' | is_current_url or '/checkout/' | is_current_url %}
+			<ul class="navbar-nav__top pe-0">
+		{% else %}
+			<ul class="navbar-nav__top">
+		{% endif %}
+				<li><a href="/wp-admin" class="btn btn-sm btn-outline-white btn-plus btn-accufire-white">Dealer Login</a></li>
+			</ul>
+			{% include "menu.twig" with {'items': menu.get_items} %}
+		</div>
+	</div>
+</nav>
