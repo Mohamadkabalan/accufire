@@ -32,3 +32,6 @@ wp-cli.local.yml
 .favorites.json
 *.sql
 .idea
+# Backups and database exports
+_resources/*.zip
+web/app/updraft/*.zip
